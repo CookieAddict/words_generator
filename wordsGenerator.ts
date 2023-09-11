@@ -17,8 +17,8 @@ function generateWords(letters: string): string[] {
             const nextLetter = remainingLetters[i];
             const updatedWord = currentWord + nextLetter;
             // slicing the remaining letters to remove the letter we just used
-            const remaining = remainingLetters.slice(0, i).concat(remainingLetters.slice(i + 1));
-            generatePermutations(updatedWord, remaining);
+            const remainingLettersSubstring = remainingLetters.slice(0, i).concat(remainingLetters.slice(i + 1));
+            generatePermutations(updatedWord, remainingLettersSubstring);
         }
     }
 
@@ -28,6 +28,6 @@ function generateWords(letters: string): string[] {
     return Array.from(words);
 }
 
-const input = 'oogd';
+const input = 'oogdalwq';
 const result = generateWords(input);
 console.log(result);
