@@ -28,6 +28,6 @@ function generateWords(letters: string): string[] {
     return Array.from(words);
 }
 
-const input = 'oogdalwq';
+const input = 'oogd';
 const result = generateWords(input);
 console.log(result);
